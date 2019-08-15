@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo "doing stuff"
                 echo "do more stuff"
+                echo "Do things"
             }
         }
     }
