@@ -14,11 +14,26 @@ pipeline {
                         echo "This is P1"
                     }
                 }
+                post {
+                    always {
+                        echo 'Post P1'
+                    }
+                }
                 stage ('P2') {
                     steps {
                         echo "This is P2"
                     }
                 }
+                post {
+                    always {
+                        echo 'Post P2'
+                    }
+                }
+            }
+        }
+        post {
+            always {
+                echo 'Post Parallel'
             }
         }
         stage('Do More Stuff') {
