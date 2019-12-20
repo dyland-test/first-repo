@@ -21,6 +21,12 @@ pipeline {
                 }
             }
         }
+        stage('Do More Stuff') {
+            steps {
+                echo "doing stuff"
+                echo "more stuff"
+            }
+        }
     }
     post {
         always {
