@@ -31,7 +31,7 @@ pipeline {
                 }
             }
         }
-        stage('Do More Stuff') {
+        /*stage('Do More Stuff') {
             steps {
                 echo "doing stuff"
                 echo "more stuff"
@@ -42,7 +42,7 @@ pipeline {
                 }
             }
         }
-    }
+    }*/
     post {
         always {
             echo 'Post end of pipeline'
