@@ -41,8 +41,8 @@ pipeline {
                     echo 'Post Do More Stuff'
                 }
             }
-        }
-    }*/
+        }*/
+    }
     post {
         always {
             echo 'Post end of pipeline'
