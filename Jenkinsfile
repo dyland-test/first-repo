@@ -13,27 +13,22 @@ pipeline {
                     steps {
                         echo "This is P1"
                     }
-                }
-                post {
-                    always {
-                        echo 'Post P1'
+                    post {
+                        always {
+                            echo 'Post P1'
+                        }
                     }
                 }
                 stage ('P2') {
                     steps {
                         echo "This is P2"
                     }
-                }
-                post {
-                    always {
-                        echo 'Post P2'
+                    post {
+                        always {
+                            echo 'Post P2'
+                        }
                     }
                 }
-            }
-        }
-        post {
-            always {
-                echo 'Post Parallel'
             }
         }
         stage('Do More Stuff') {
@@ -41,11 +36,16 @@ pipeline {
                 echo "doing stuff"
                 echo "more stuff"
             }
+            post {
+                always {
+                    echo 'Post Do More Stuff'
+                }
+            }
         }
     }
     post {
         always {
-            echo 'Hello World!'
+            echo 'Post end of pipeline'
         }
     }
 }
