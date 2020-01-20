@@ -5,6 +5,8 @@ pipeline {
             steps {
                 echo "doing stuff"
                 echo "more stuff"
+                echo env.BRANCH_NAME
+                echo env.CHANGE_ID
             }
         }
         stage('Parallel') {
