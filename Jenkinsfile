@@ -47,7 +47,7 @@ pipeline {
     }
     post {
         always {
-            echo 'Post end of pipeline'
+            echo 'Post end of pipeline!'
         }
     }
 }
