@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Do Stuff') {
             steps {
-                echo "doing stuff!"
+                echo "doing stuff"
                 echo "more stuff"
                 echo env.BRANCH_NAME
                 echo env.CHANGE_ID
