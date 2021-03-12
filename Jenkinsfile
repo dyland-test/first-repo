@@ -3,7 +3,13 @@ pipeline {
     stages {
         stage('Do Stuff') {
             steps {
-                checkout scm
+                checkout([$class: 'GitSCM',
+                    branches: [[name: "dockerfile"]],
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [],
+                    submoduleCfg: [],
+                    userRemoteConfigs: [[url: 'https://github.com/dyland-test/first-repo.git',credentialsId: '85262083-3829-4e50-a8fb-853e55bd3236']]
+                    ])
                 echo "doing stuff"
                 echo "more stuff"
                 echo env.BRANCH_NAME
