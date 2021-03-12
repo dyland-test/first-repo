@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Do Stuff') {
             steps {
+                checkout scm
                 echo "doing stuff"
                 echo "more stuff"
                 echo env.BRANCH_NAME
