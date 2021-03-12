@@ -1,5 +1,5 @@
 pipeline {
-    agent 'master'
+    agent { label 'master' }
     environment {
       VERSION = 1
       BUILD_DATE = sh(returnStdout: true, script: 'echo $(date "+%Y%m%d-%H%M%S")').trim()
