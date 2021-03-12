@@ -1,5 +1,15 @@
 pipeline {
     agent any
+    environment {
+      VERSION = 1
+      BUILD_DATE = sh(returnStdout: true, script: 'echo $(date "+%Y%m%d-%H%M%S")').trim()
+    }
+    parameters {
+    gitParameter branchFilter: 'origin/(.*)',
+                 name: 'BRANCH',
+	 	 quickFilterEnabled: 'true',
+                 type: 'PT_BRANCH'
+    }
     stages {
         stage('Do Stuff') {
             steps {
