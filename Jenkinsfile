@@ -24,6 +24,12 @@ pipeline {
                 echo "more stuff"
                 echo env.BRANCH_NAME
                 echo env.CHANGE_ID
+		sh "pwd"
+		dir "test" {
+		  sh "pwd"
+		  sh "ls"
+		  sh "cat mytext.txt"
+		}
             }
         }
         stage('Parallel') {
