@@ -29,6 +29,7 @@ pipeline {
 		  sh "pwd"
 		  sh "ls"
 		  sh "cat mytext.txt"
+	          sh 'sed -e s/test/tester/g < mytext.txt > mytexttest.txt'
 		}
             }
         }
