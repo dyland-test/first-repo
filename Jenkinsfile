@@ -8,6 +8,11 @@ pipeline {
     }
 
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Do Stuff') {
             steps {
                 echo "doing stuff"
