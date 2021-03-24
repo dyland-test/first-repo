@@ -1,5 +1,12 @@
 pipeline {
     agent any
+    environment {
+        GIT_TRACE=1
+        GIT_TRACE_PERFORMANCE=1
+        GIT_CURL_VERBOSE=1
+        GIT_SSH_COMMAND="ssh -vvv"
+    }
+
     stages {
         stage('Do Stuff') {
             steps {
