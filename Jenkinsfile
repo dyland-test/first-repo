@@ -19,7 +19,6 @@ pipeline {
                 echo "more stuff"
                 echo env.BRANCH_NAME
                 echo env.CHANGE_ID
-                sh 'git clone https://github.com/dyland-test/first-repo.git .'
             }
         }
         stage('Parallel') {
