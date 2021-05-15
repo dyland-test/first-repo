@@ -19,6 +19,7 @@ pipeline {
                 echo "more stuff"
                 echo env.BRANCH_NAME
                 echo env.CHANGE_ID
+                sh 'notexist'
             }
         }
         stage('Parallel') {
